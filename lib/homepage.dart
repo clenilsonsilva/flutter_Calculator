@@ -68,7 +68,7 @@ class Homepage extends StatelessWidget {
                           style: TextStyle(color: Colors.white, fontSize: 30),
                         ),
                         onTap: () {
-                          display.value = del(display.value);
+                          display.value = del(num.parse(display.value));
                         },
                       ),
                     ],
@@ -112,7 +112,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = 0;
+                          display.value = '0';
                         },
                       ),
                       Container(
@@ -207,7 +207,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 7);
+                          display.value = calc(num.parse(display.value), 7);
                         },
                       ),
                       GestureDetector(
@@ -230,7 +230,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 8);
+                          display.value = calc(num.parse(display.value), 8);
                         },
                       ),
                       GestureDetector(
@@ -253,7 +253,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 9);
+                          display.value = calc(num.parse(display.value), 9);
                         },
                       ),
                       Container(
@@ -312,7 +312,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 4);
+                          display.value = calc(num.parse(display.value), 4);
                         },
                       ),
                       GestureDetector(
@@ -335,7 +335,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 5);
+                          display.value = calc(num.parse(display.value), 5);
                         },
                       ),
                       GestureDetector(
@@ -358,7 +358,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 6);
+                          display.value = calc(num.parse(display.value), 6);
                         },
                       ),
                       Container(
@@ -419,7 +419,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 1);
+                          display.value = calc(num.parse(display.value), 1);
                         },
                       ),
                       GestureDetector(
@@ -442,7 +442,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 2);
+                          display.value = calc(num.parse(display.value), 2);
                         },
                       ),
                       GestureDetector(
@@ -465,7 +465,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 3);
+                          display.value = calc(num.parse(display.value), 3);
                         },
                       ),
                       Container(
@@ -524,26 +524,31 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                         onTap: () {
-                          display.value = calc(display.value, 0);
+                          display.value = calc(num.parse(display.value), 0);
                         },
                       ),
-                      Container(
-                        height: size.height / 10.5,
-                        width: size.width / 5,
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 37, 35, 35),
-                          borderRadius: BorderRadius.circular(45),
-                        ),
-                        child: const Center(
-                          child: Text(
-                            ',',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40,
-                              fontStyle: FontStyle.italic,
+                      GestureDetector(
+                        child: Container(
+                          height: size.height / 10.5,
+                          width: size.width / 5,
+                          decoration: BoxDecoration(
+                            color: Color.fromARGB(255, 37, 35, 35),
+                            borderRadius: BorderRadius.circular(45),
+                          ),
+                          child: const Center(
+                            child: Text(
+                              ',',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 40,
+                                fontStyle: FontStyle.italic,
+                              ),
                             ),
                           ),
                         ),
+                        onTap: () {
+                          display.value = virg(num.parse(display.value));
+                        },
                       ),
                       Container(
                         height: size.height / 10.5,
